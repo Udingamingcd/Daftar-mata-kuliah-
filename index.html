@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Kuliah - Sistem Informasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JADWAL KULIAH SEMESTER GANJIL</h1>
+            <p class="subtitle">Program Studi Sistem Informasi - Tahun Akademik 2025/2026</p>
+        </header>
+        
+        <div class="controls">
+            <div class="class-selector">
+                <label for="class-select">Pilih Kelas:</label>
+                <select id="class-select">
+                    <option value="">-- Silakan Pilih Kelas --</option>
+                    <option value="1A">Kelas 1A</option>
+                    <option value="1B">Kelas 1B</option>
+                    <option value="2A">Kelas 2A</option>
+                    <option value="2B">Kelas 2B</option>
+                    <option value="3">Kelas 3</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="schedule-container">
+            <table id="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Jam ke</th>
+                        <th>Waktu</th>
+                        <th>Mata Kuliah</th>
+                        <th>Dosen</th>
+                        <th>Ruang</th>
+                    </tr>
+                </thead>
+                <tbody id="schedule-body">
+                    <tr>
+                        <td colspan="6" class="empty-cell">Silakan pilih kelas untuk menampilkan jadwal</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <footer>
+            <p>© Muhammad Syaiful 2025</p>
+        </footer>
+    </div>
+
+    <script src="schedule-data.js"></script>
+    <script src="schedule-function.js"></script>
+</body>
+</html>
