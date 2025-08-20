@@ -51,6 +51,9 @@ function showSchedule(className) {
         `;
 		scheduleBody.appendChild(row);
 	});
+	
+	// Simpan pilihan kelas ke local storage
+	localStorage.setItem('selectedClass', className);
 }
 
 // Event listener untuk dropdown
@@ -58,5 +61,17 @@ document.getElementById('class-select').addEventListener('change', function() {
 	showSchedule(this.value);
 });
 
-// Inisialisasi
-showSchedule('');
+// Fungsi untuk memuat pilihan kelas dari local storage
+function loadSelectedClass() {
+	const selectedClass = localStorage.getItem('selectedClass');
+	if (selectedClass) {
+		const classSelect = document.getElementById('class-select');
+		classSelect.value = selectedClass;
+		showSchedule(selectedClass);
+	}
+}
+
+// Inisialisasi saat halaman dimuat
+document.addEventListener('DOMContentLoaded', function() {
+	loadSelectedClass();
+});showSchedule('');
